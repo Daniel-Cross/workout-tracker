@@ -1,0 +1,29 @@
+#Navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #eee;
+}
+
+#Navbar .logo {
+  padding-left: 30px;
+  text-decoration: none;
+  color: black;
+}
+
+#Navbar .links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-right: 30px;
+}
+
+#Navbar .links li {
+  list-style-type: none;
+}
+
+#Navbar .links a {
+  margin: 10px 15px;
+  text-decoration: none;
+  color: black;
+}
