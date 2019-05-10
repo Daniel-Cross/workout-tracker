@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import Navbar from './components/navbar';
 import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Navbar from './components/navbar';
+import RepMax from './components/repMax';
+import BenchPress from './components/benchPress';
 
 class App extends Component {
 	constructor(props) {
@@ -9,10 +12,15 @@ class App extends Component {
 	}
 	render() {
 		return (
-			<div id="App">
-				<Navbar />
-				<h1>Hello World</h1>
-			</div>
+			<Router>
+				<div id="App">
+					<Navbar />
+					<Switch>
+						<Route exact path="/" component={RepMax} />
+						<Route exact path="/bench" component={BenchPress} />
+					</Switch>
+				</div>
+			</Router>
 		);
 	}
 }

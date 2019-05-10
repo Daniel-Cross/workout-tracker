@@ -1,23 +1,26 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/navbar.css';
 
 const Navbar = () => {
 	return (
 		<div id="Navbar">
-			<h1 className="logo">5-3-1</h1>
+			<Link to="/">
+				<h1 className="logo">5-3-1</h1>
+			</Link>
 			<ul className="links">
-				<a href="#">
+				<Link to="military">
 					<li>Military Press</li>
-				</a>
-				<a href="#">
+				</Link>
+				<Link to="squat">
 					<li>Squat</li>
-				</a>
-				<a href="#">
+				</Link>
+				<Link to="/bench">
 					<li>Bench Press</li>
-				</a>
-				<a href="#">
+				</Link>
+				<Link to="deadlift">
 					<li>Deadlift</li>
-				</a>
+				</Link>
 			</ul>
 		</div>
 	);
